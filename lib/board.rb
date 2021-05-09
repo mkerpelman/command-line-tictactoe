@@ -14,34 +14,6 @@ class Board
         puts " #{@state[2][0]} | #{@state[2][1]} | #{@state[2][2]}     7 | 8 | 9"
     end
 
-    def mark(marker, cell)
-        @state[get_row_from(cell)][get_col_from(cell)] = marker
-    end
-
-    def empty_cell?(cell)
-        @state[get_row_from(cell)][get_col_from(cell)] == " "
-    end
-
-    private
-
-    def get_row_from(cell)
-        if (1..3).to_a.include?(cell)
-            0
-        elsif (4..6).to_a.include?(cell)
-            1
-        else
-            2
-        end
-    end
-
-    def get_col_from(cell)
-        if [1, 4, 7].include?(cell)
-            0
-        elsif [2, 5, 8].include?(cell)
-            1
-        else
-            2
-        end
-    end
+    
 
 end
