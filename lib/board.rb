@@ -18,6 +18,10 @@ class Board
         @state[get_row_from(cell)][get_col_from(cell)] = marker
     end
 
+    def empty_cell?(cell)
+        @state[get_row_from(cell)][get_col_from(cell)] == " "
+    end
+
     private
 
     def get_row_from(cell)
@@ -40,9 +44,4 @@ class Board
         end
     end
 
-
 end
-
-x = Board.new
-x.mark("X", 1)
-x.display
